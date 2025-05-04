@@ -93,11 +93,8 @@ export class LinkedIn implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'LinkedIn Automation',
 		name: 'linkedin',
-		// Adding multiple icon properties to ensure compatibility
+			// Only use the valid icon property
 		icon: 'file:linkedin.svg',
-		iconUrl: 'file:icons/linkedin.svg',
-		// This absolute path can help in some n8n versions
-		iconFile: __dirname + '/icons/linkedin.svg',
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
